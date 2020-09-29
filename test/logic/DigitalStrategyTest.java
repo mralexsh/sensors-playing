@@ -9,15 +9,15 @@ public class DigitalStrategyTest {
     private static final int SKIPPING_TICKS = 7;
     private static final int REPEAT_AMOUNT = 17137;
 
-    private static DigitalStrategy dStrategy;
+    private static DigitalStrategy digitalStrategy;
     private static FakeSensor fakeSensor;
 
     @BeforeClass
     public static void initObj() {
-        dStrategy = new DigitalStrategy();
-        dStrategy.setSkippingTicks(SKIPPING_TICKS);
+        digitalStrategy = new DigitalStrategy();
+        digitalStrategy.setSkippingTicks(SKIPPING_TICKS);
         fakeSensor = new FakeSensorImpl(SensorType.DIGITAL, "sensor1");
-        fakeSensor.setEmulationStrategy(dStrategy);
+        fakeSensor.setEmulationStrategy(digitalStrategy);
     }
 
     @Test
