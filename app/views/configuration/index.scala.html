@@ -1,0 +1,8 @@
+@(sensors: List[Sensor])
+@main("Configuration") {
+    <ul>
+    @for(sensor <- sensors) {
+        <li>@sensor.getName</li>
+    }
+    </ul>
+}
